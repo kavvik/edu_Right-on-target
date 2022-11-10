@@ -42,11 +42,21 @@
                                     <action selector="checkNumber" destination="BYZ-38-t0r" eventType="touchUpInside" id="d02-wm-rPE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBX-wH-PXm">
+                                <rect key="frame" x="803" y="362" width="63" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="About"/>
+                                <connections>
+                                    <action selector="showNextScreen" destination="BYZ-38-t0r" eventType="touchUpInside" id="jzv-WB-vfa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.6705882353" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="bBX-wH-PXm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="BgO-2R-YQH"/>
                             <constraint firstItem="CUW-HC-Z1X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="FxV-Y9-CYr"/>
+                            <constraint firstAttribute="trailing" secondItem="bBX-wH-PXm" secondAttribute="trailing" constant="30" id="IRH-g4-Vp9"/>
                             <constraint firstItem="Ypy-Fh-hG2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MUf-tF-fBU"/>
                             <constraint firstItem="Ypy-Fh-hG2" firstAttribute="top" secondItem="YOw-5j-KZX" secondAttribute="bottom" constant="50" id="Mea-Ei-3EM"/>
                             <constraint firstItem="YOw-5j-KZX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="b2I-CE-bDq"/>
@@ -55,6 +65,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YOw-5j-KZX" secondAttribute="trailing" constant="20" id="yHp-zo-lm9"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="OcU-9A-cCZ"/>
                     <connections>
                         <outlet property="label" destination="CUW-HC-Z1X" id="Bzw-3X-iOh"/>
                         <outlet property="slider" destination="YOw-5j-KZX" id="fad-Jb-ssJ"/>
@@ -64,10 +75,43 @@
             </objects>
             <point key="canvasLocation" x="34.821428571428569" y="97.101449275362327"/>
         </scene>
+        <!--Second View Controller-->
+        <scene sceneID="hZ3-ih-R8j">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="iEb-Qy-vkN" customClass="SecondViewController" customModule="edu_Right_on_target" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y9i-IQ-ZMS">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJ3-X4-IGQ">
+                                <rect key="frame" x="420" y="191.5" width="56" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                                <connections>
+                                    <action selector="hideCurrentScene" destination="iEb-Qy-vkN" eventType="touchUpInside" id="Ub1-br-Svx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HDI-Xg-CGM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cJ3-X4-IGQ" firstAttribute="centerX" secondItem="y9i-IQ-ZMS" secondAttribute="centerX" id="Jch-cx-DZJ"/>
+                            <constraint firstItem="cJ3-X4-IGQ" firstAttribute="centerY" secondItem="y9i-IQ-ZMS" secondAttribute="centerY" id="Jfb-7N-pEF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pVg-2I-hgu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MMh-tp-32a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="668" y="97"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1.square.fill" catalog="system" width="128" height="114"/>
         <image name="50.square.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
